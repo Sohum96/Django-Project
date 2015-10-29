@@ -1,0 +1,35 @@
+The algorithm goes as follows,
+First ABC is considered and he gets a branch change to his first preference EP B.Tech. The strength of EP B.Tech now becomes 3(upper limit) and that of CS B.Tech falls to 8(lower limit).
+
+Next DEF is considered. DEF does not get a branch change right now, as his CPI<9 and original branch(CS  B.Tech) strength falls below the lower limit(=8) if he leaves.
+
+GHI is considered. GHI does not get a branch change right now, as his CPI is <9 and his original branch(EP B.Tech) strength falls below the lower limit(=3) if he leaves.
+Similarly, JKL from same branch(EP B.Tech) does not get a branch change to any branch right now(almost same case).
+
+Now, MNO is considered. He currently gets a branch change from ME B.Tech to AE B.Tech despite the fact that someone else(JKL), with the CPI equal to that of MNO, is denied branch change to AE B.Tech as otherwise MNO can get a branch change and so, later in the interations JKL will be "pulled up" to branch AE B.Tech (due to branch change of MNO!)
+So, strength of AE B.Tech is 2(upper limit) and that of ME B.Tech is 9.
+
+LMN is given branch change to CS B.Tech.
+Strength of CS B.Tech is 9 and that of ME B.Tech is 8.
+
+PQR gets branch change from EE B.Tech to CS B. Tech. and OPQ are simply rejected(ineligible) as OPQ is in ST(Scheduled Tribes) category and his CPI<7.
+Strength of CS B.Tech is 10 and that of EE B.Tech is 8.
+
+Now, DEF is again considered. He gets a branch change to EP B.Tech.
+
+GHI also does not get a branch change to CS B.Tech due to the same (above mentioned) reason.
+
+Now, JKL gets a branch change from EP B.Tech to AE B.Tech despite the fact that his original branch- EP B.Tech's strength falls below 3(=lower limit) as there is someone (MNO) with =CPI who got a branch change to AE B.Tech.(X will get branch change to branch B if there is someone else with =CPI who gets a branch change to B. The branch capacity will be extended if need be.)
+Strength of EP B.Tech is 2 and strength of AE B.Tech is 
+3.
+
+But, GHI, of EP B.Tech, gets branch change to CS B.Tech as there is someone(JKL) with equal CPI, in branch EP B.Tech(same original branch) who gets a branch change to some branch(AE B.Tech). So, strength of CS B.Tech is 9 and that of AE B.Tech is 2.
+(X, of branch A, gets branch change to branch B if someone else with same CPI, of branch A got a branch change and the only thong stopping X is the constraint that his branch A's strength will fall below lower limit)
+Strength of CS B.Tech is 10 and that of EP B.Tech is 1.
+
+Done!
+
+ 
+
+
+ 

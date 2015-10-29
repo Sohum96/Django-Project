@@ -1,0 +1,5 @@
+This is a real world example(with depricated personal information)(we guess it seems so). And the solution is correct!
+Here HIR, HTA both belong to the same branch and have the same CPI. However, when one of the two gets the 
+branch change the other is also given a branch change even though the strength of the parent branch falls below 
+the lower limit! 
+Also, branch strength was extended to accomodate HRY, MAY as both had same CPI and one got branch change.

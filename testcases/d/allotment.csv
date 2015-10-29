@@ -1,0 +1,115 @@
+150010000,EEP,EE Dual Deg E2,EE B.Tech
+150010001,MAR,EE B.Tech,CS B.Tech
+150010002,ANI,MM B.Tech,ME B.Tech
+150010003,HAR,EE B.Tech,CS B.Tech
+150010004,MAY,ME B.Tech,CS B.Tech
+150010005,DIA,CS B.Tech,EP B.Tech
+150010006,shi,ME B.Tech,Branch Unchanged
+150010007,WAL,ME B.Tech,CS B.Tech
+150010008,NIL,EE B.Tech,Branch Unchanged
+150010009,SAN,ME B.Tech,Branch Unchanged
+150020000,SHI,AE B.Tech,EE B.Tech
+150020001,AND,CE B.Tech,CS B.Tech
+150020002,HMA,EE Dual Deg E2,Branch Unchanged
+150020003,ESH,MM B.Tech,CS B.Tech
+150020004,UHI,AE B.Tech,EP B.Tech
+150020005,ARG,EE B.Tech,CS B.Tech
+150020006,XIT,EE Dual Deg E1,Branch Unchanged
+150020007,AIN,CL B.Tech,CS B.Tech
+150020008,PTA,EE Dual Deg E1,EE B.Tech
+150020009,KAR,CH,EE B.Tech
+150030000,HUL,ME B.Tech,EE B.Tech
+150030001,ARG,EE Dual Deg E2,CS B.Tech
+150030002,WAL,CL B.Tech,EE Dual Deg E1
+150030003,HNA,EE B.Tech,Branch Unchanged
+150030004,NEY,AE B.Tech,ME B.Tech
+150030005,RNI,EE B.Tech,Branch Unchanged
+150030006,LIA,CL B.Tech,ME B.Tech
+150030007,NAN,CL B.Tech,EE B.Tech
+150030008,HAH,EE Dual Deg E1,Branch Unchanged
+150030009,att,EP B.Tech,EE B.Tech
+150040000,arg,CL B.Tech,ME B.Tech
+150040001,HRY,EE Dual Deg E1,CS B.Tech
+150040002,ESH,EE Dual Deg E1,Branch Unchanged
+150040003,ARI,EE Dual Deg E1,EE B.Tech
+150040005,PTA,CL B.Tech,EE Dual Deg E1
+150040006,ANI,CL B.Tech,Branch Unchanged
+150040007,kar,ME Dual Deg M2,AE B.Tech
+150040008,EDI,CL B.Tech,ME B.Tech
+150040009,JAR,EN Dual Deg,ME B.Tech
+150050000,RNI,EN Dual Deg,ME Dual Deg M2
+150050001,RAM,ME Dual Deg M2,EE B.Tech
+150050002,ARI,ME B.Tech,EE Dual Deg E2
+150050003,DAS,CL B.Tech,EE Dual Deg E1
+150050004,ARY,MM B.Tech,ME Dual Deg M2
+150050005,HAK,MM B.Tech,EE Dual Deg E2
+150050006,HIR,CL B.Tech,Branch Unchanged
+150050007,HRA,ME B.Tech,Branch Unchanged
+150050008,UNJ,AE B.Tech,EP B.Tech
+150050009,RAM,CE B.Tech,Branch Unchanged
+150060000,SrS,EP B.Tech,Branch Unchanged
+150060001,RAD,MM B.Tech,EE Dual Deg E2
+150060002,HAH,MM Dual Deg Y1,ME B.Tech
+150060003,ASH,CE B.Tech,EE Dual Deg E1
+150060004,ODI,MM B.Tech,ME Dual Deg M2
+150060005,HAN,CH,ME Dual Deg M2
+150060006,NON,CL B.Tech,Branch Unchanged
+150060007,HUR,EE Dual Deg E1,Branch Unchanged
+150060008,ETH,CE B.Tech,ME B.Tech
+150060009,PPA,EE Dual Deg E2,Branch Unchanged
+150070000,PTA,MM Dual Deg Y1,ME Dual Deg M2
+150070001,EKH,CH,EE Dual Deg E1
+150070002,PTA,CE B.Tech,ME B.Tech
+150070003,ETE,ME B.Tech,Branch Unchanged
+150070004,VYA,CE B.Tech,Branch Unchanged
+150070005,JAN,EP Dual Deg N1,Branch Unchanged
+150070006,HTA,CH,MM B.Tech
+150070007,ArS,AE B.Tech,Branch Unchanged
+150070008,HYA,EN Dual Deg,Branch Unchanged
+150070009,PTA,MM B.Tech,Ineligible
+150080000,AIN,MM B.Tech,CL B.Tech
+150080001,AIN,EN Dual Deg,EE Dual Deg E2
+150080002,HAH,EN Dual Deg,Branch Unchanged
+150080003,ARD,ME Dual Deg M2,ME B.Tech
+150080004,WAL,CE B.Tech,ME Dual Deg M2
+150080005,HAH,MM B.Tech,Ineligible
+150080006,HAL,MM B.Tech,Ineligible
+150080007,ANI,AE B.Tech,CL B.Tech
+150080008,YER,CL B.Tech,Branch Unchanged
+150090000,HEN,MM B.Tech,Branch Unchanged
+150090001,MAR,CL B.Tech,Branch Unchanged
+150090002,DRA,MM B.Tech,CE B.Tech
+150090003,ENA,CL B.Tech,EE Dual Deg E1
+150090004,RMA,MM B.Tech,CL B.Tech
+150090005,ArS,AE B.Tech,Ineligible
+150090007,HAN,CE B.Tech,Branch Unchanged
+150100000,WAR,EN Dual Deg,Branch Unchanged
+150100001,NAN,AE B.Tech,Branch Unchanged
+150100002,ATH,CH,CL B.Tech
+150100003,RMA,EP Dual Deg N1,EE Dual Deg E2
+150100004,EDY,AE B.Tech,Branch Unchanged
+150100007,rde,ME B.Tech,Ineligible
+150110000,lan,MM B.Tech,Ineligible
+150110001,TRA,MM B.Tech,ME B.Tech
+150110002,VLA,CH,CL B.Tech
+150110003,ESE,CH,ME B.Tech
+150110004,ANA,EE Dual Deg E1,Branch Unchanged
+150110007,HAN,MM B.Tech,Ineligible
+150120000,WAT,CE B.Tech,Ineligible
+150120001,PPA,MM B.Tech,ME B.Tech
+150120002,HTA,MM B.Tech,Ineligible
+150120003,BRA,CL B.Tech,ME B.Tech
+150120004,JAT,MM B.Tech,Ineligible
+150120007,RAN,MM B.Tech,Ineligible
+150130001,UKH,MM B.Tech,ME B.Tech
+150130002,yay,MM B.Tech,Ineligible
+150130003,THY,AE B.Tech,EP B.Tech
+150130007,ALA,MM B.Tech,Ineligible
+150140001,kar,ME Dual Deg M2,Branch Unchanged
+150140003,USH,MM B.Tech,Branch Unchanged
+150140007,ESH,MM B.Tech,Ineligible
+150150001,RAO,CE B.Tech,Branch Unchanged
+150150003,EYA,CL B.Tech,Branch Unchanged
+150160001,HIR,CH,CE B.Tech
+150160003,ABH,AE B.Tech,Branch Unchanged
+150200005,VEK,EN Dual Deg,ME B.Tech

@@ -1,0 +1,33 @@
+Feature: Login page accepts only those usernames and corresponding passwords which have been added to the database by the admin
+Testcases: Try a username not already added to the database by the admin with any password, or a username which has been added to the database, but with a wrong password.
+Expected Behavior: The page loads again with username and password reset.
+
+**********After logging in the user is taken to the page for filling up his/her details and adding the branch preferences**********
+
+Feature: (for filling up the details)RollNo. field accepts only roll numbers starting with 15 and containing exactly 9 digits.
+Testcases: Enter roll number staring with 15
+Expected Behavior: The UI shows a notification to the user and submit button deactivated until the field is correctly populated.
+
+Feature: Name field accepts only strings of length less than 30
+TestCases: Enter any string in the "Your Name" field and submit
+Expected Behavior: The page takes only the first 30 characters if more than 30 characters have been entered. Otherwise, the whole string is recorded in the user's database.
+
+Feature: For current branch and category options, click on the corresponding buttons and select your option from the drop-down list 
+TestCases: Click on the button for current branch and category options
+Expected Behavior: The page provides a list of  options from which the user has to choose one by clicking on it.
+
+Feature: The current CPI must be between 0 and 10.
+TestCases: Enter any CPI {click on the corresponding box and write the current CPI. (or click on increase or decrease buttons to increase (or decrease) it by 0.01)}
+Expected Behavior: The UI shows a notification to the user and submit button is deactivated until the field is correctly populated.
+
+Feature: For adding the branch preferences, select "Add another preference", and select your preference after clicking on the drop-down list.
+TestCases: Click on "Add a preference" and then on on the branch name button.
+Expected Behavior:  The page provides a list of options among which the user has to select the branch of his/her choice by clicking on it. (This is stored in the user's database)
+
+Feature: Adding a branch which has already been entered in preferences causes no change in the existing preference order.
+TestCases: Add any branch (B1) to the preference list and then add it again after making some changes (or not).
+Expected Behavior: The page doesn't consider the last addition of the branch since it has already been added.
+
+Feature: For editing or deleting a branch in the preference list, click on the corresponding buttons.
+TestCases: Add any branch (B1) to the preference list and then click on edit/delete button for that branch at any point of time.
+Expected Behavior: The page provides the list of options to select from, if edit button was clicked, else if delete button was clicked, the page deletes that particular branch from the preference list and reloads with the new list.

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Branch Change Result {% endblock %}
+
+{% block heading %}<br/> <br/> <h1>Results <small> </small> </h1>{% endblock %}
+
+{% block content %}
+<ul class="list-unstyled">
+{% for student in studentList %}
+	<li class="well">
+	<div class="row">
+		<div class="col-md-3">{{ student.rollno }} </div>
+		<div class="col-md-3">{{ student.name }} </div>
+		<div class="col-md-3">{{ student.pBranch }} </div>
+		<div class="col-md-3">{{ student.fBranch }} </div>
+	</div>
+	</li>
+{% endfor %}	
+</ul>
+<a class="btn btn-default btn-md" href="{% url "bc_branch_list" %}">Back</a>
+
+{% endblock %}

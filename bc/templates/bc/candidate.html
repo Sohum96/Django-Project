@@ -1,0 +1,30 @@
+{% if candidate.owner == user %}
+<div style="display:inline;s">
+<div class="row">
+		<div class="col-md-6"><a class="lead" href="{{ branch.url }}">{{ candidate.u_name }}</a> by <a href="{% url "bc_branch_user" candidate.owner.username %}">
+    {{ candidate.owner.username }}</a> {{ candidate.date_created|timesince }} ago &#09;
+		</div>
+		{% if edit %}
+		<div class="col-md-4">
+ 			<div style="text-align:right; display:inline; margin:50%">
+  				 <a class="btn btn-default btn" href="{% url "bc_candidate_edit" candidate.pk %}">Edit Info</a>	</div>       
+        </div>
+        {% endif %}
+</div>         
+
+<li class="well">
+	<div class="row">
+		<div class="col-md-3">RollNo : <a class="lead" href="{{ branch.url }}">{{ candidate.roll_no }}</a> </div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">Present Branch : <a class="lead" href="{{ branch.url }}">{{ candidate.p_branch }}</a></div></div>
+	<div class="row">
+		<div class="col-md-3">CPI : <a class="lead" href="{{ branch.url }}">{{ candidate.cpi }}</a></div>
+	</div>	
+	<div class="row">
+		<div class="col-md-3">Category : <a class="lead" href="{{ branch.url }}">{{ candidate.cat }}</a></div></div>
+</li>
+</div>
+{% else %}
+<h1>Candidate</h1>
+{% endif %}

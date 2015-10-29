@@ -1,0 +1,11 @@
+In this test case, as strength of EP should be >=12 ABC("alpha constraint"),
+ABC, DEF, GHI get a branch change into CS B.Tech. and the strength of EP Branch becomes 12.
+So, JKL, MNO, whose CPI<9 don't can't a branch change to any other branch.
+As JKL, MNO don't get a branch change PQR, from AE with lower CPI than JKL, MNO, does not get a branch change into CS("fairness"). 
+
+ 
+
+
+
+
+

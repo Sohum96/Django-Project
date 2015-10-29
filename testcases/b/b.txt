@@ -1,0 +1,18 @@
+The algorithm proceeds as follows,
+ABC gets branch change to CS B.Tech and the strength of EP B. Tech reduces to 6(lower limit) and strength of CS B.Tech increases to 2(upper limit).
+
+DEF is considered but does not get a Branch Change to any branch as his branch, CS B.Tech's strength can't go below 2.
+
+GHI gets a branch change despite the fact that his CPI<9 and his branch, EP B.Tech 's strength will go below lower limit=6, as ABC- from the same branch gets a branch change from EP B.Tech(some one from same branch with same CPI gets branch change). So, the strength of EP B.Tech becomes 5 and that of CS B.Tech becomes 3(destination branch extended to accomodate one more person- GHI, when a student with the same CPI, ABC here, got a branch change to CS B.Tech).
+JKL is considered, but, does not get a branch change to any branch change to any branch of his preference as his original branch strength will fall below the lower limit("alpha condition").
+
+MNO gets a branch change to AE B.Tech from EE B.Tech. Strength of AE B.Tech is changed to 2(upper limit reached) and the strength of EE B.Tech is reduced to 8(lower limit).
+
+PQR is considered, but, he does not get a branch change to CS B.Tech as a person with higher CPI(DEF here) is currently denied branch change to CS B.Tech. PQR does get branch change to AE B.Tech despite the fact that his branch strength falls below 2(lower limit, "alpha condition") as a person with equal CPI in EE B.Tech(MNO here) gets a branch change to some branch.(a person X gets branch change if someone else in the same branch with same CPI gets a branch change and the only constraint stopping X from getting banch change is his original branch strength falling below 75%). Also, PQR gets a branch change to AE B.Tech despite the fact that srength of AE B.Tech is 2(upper limit) as there is a person with equal CPI (MNO here) who gets a branch change to AE B.Tech.(destination branch extended to accomodate one more person with CPI equal to a branch changer(to same destination branch)).
+Now, strength of EE B.Tech is 7 and that of AE B.Tech is 3.
+
+Now DEF is considered, as now strength of CS B.Tech is 3 so DEF gets branch change to EP B.Tech.
+Strength of EP B.Tech is 6 and that of CS B.Tech is 2.
+  
+JKL does not get a branch change to any branch as his CPI<9 and his source strength will fall below lower limit(=6) if branch change is given!
+
