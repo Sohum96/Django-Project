@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% if user.is_authenticated %}
+{{user.username}}'s Page
+{% else %}
+Login Page
+{% endif %}
+{% endblock %}
+
+{% block heading %}
+{% if not user.is_authenticated %}
+<h1><br/>Branch Change for 2015</h1>
+{% else %}
+	{% if not user.is_superuser %}
+	{% if edit %}
+	<h1><br>{{ user.username }}'s Form<br>
+    <small><strong>Click on buttons below to open up forms ...</strong></small>
+  	{% else %}
+  	<h1><br/>{{ user.username }}'s Page<br>
+    <small>User Info...<br/></small></h1>
+ 	{% endif %}
+
+ 	{% else %}
+	<h1><br><strong>Admin's Page</strong><br><small>Special Previliges...</small></h1>
+	{% endif %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if not user.is_superuser %}
+	
+	{% if user.is_authenticated %}
+{% block user %}
+<ul class="list-unstyled">
+	{% for candidate in candidates %}
+		{% if candidate.owner == user %}
+		{% include "bc/candidate.html" %}
+		{% endif %}
+		{% empty %}
+		<h4 style='margin:0 0 0 35%;'> Fill your details in the form! </h4>
+    	{% if edit %}
+    	<li style='margin:0 0 0 38%'><a class="btn btn-default" href="{% url "bc_candidate_create" user.username %}"> Fill in your details</a>
+    	{% endif %}	
+	{% endfor %}
+	</ul>
+{% endblock %}
+	{% if edit %}
+	<h3 style='margin:0 0 0 20%;'>Preferences:</h3>
+	{% else %}
+	<h3 style='margin:0 0 0 35%;'>Preferences:</h3>
+	{% endif %}
+	<ol>
+	<div class="list-group">
+	{% for branch in branches %}
+		{% if branch.owner == user %}
+ 		{% if not edit %}<li style="width:30%;margin:0 35% 0 35%;"> <div class="list-group-item"> {% else %} <li style="width:60%;margin:0 20% 0 20%;"><div class="list-group-item" >  {% endif %}
+		{% if branch == branch_to_be_edited %}
+			{% block preference %}
+			{% endblock %}
+		{% else %}
+			{% include "bc/branch.html" %}
+		{% endif %}
+		<br></div></li>
+ 		{% endif %}
+ 		{% empty %}
+		<h4 style='margin:0 0 0 40%;'>Nil</h4>
+	{% endfor %}
+	</ol>
+	</div>
+	{% if edit %}
+	<p><a class="btn btn-default" style='margin:0 0 0 38%' href='{% url "bc_branch_create" user.username %}'>
+	Add Preference</a></p>
+	{% endif %}
+
+	{% block add_preference %}	
+	{% endblock %}
+	
+{% else %}
+	<br>
+	<p><a class="lead" href={% url "user_login" %}> 
+	{% if loginSuccessful %}	Login from above! 
+	{% else %}	Incorrect username or password! Try again!
+	{% endif %}	
+	</a></p>
+{% endif %}
+
+
+	{% else %}
+	{% include 'bc/admin.html' %}
+{% endif %}
+{% endblock %}

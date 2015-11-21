@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %} Branch Change Result {% endblock %}
+
+{% block heading %}<br/> <br/> <h1>Branch Change Results</h1>{% endblock %}
+
+{% block content %}
+<div class='container' style='width:50%; margin:0 25% 0 25%;'>
+<h3> Allotment Details </h3>
+<table class='table table-striped table-hover'>
+<thead>
+	<tr>
+		<th>Roll No</th>
+		<th>Name </th>
+		<th>Current Branch </th>
+		<th>Alloted Branch </th>
+	</tr>
+</thead>		 
+<tbody>
+{% for student in studentList %}
+	<tr>
+		<td>{{ student.rollno }} </td>
+		<td>{{ student.name }} </td>
+		<td>{{ student.pBranch }} </td>
+		<td>{{ student.fBranch }} </td>
+	</tr>
+{% endfor %}	
+</tbody>
+</table>
+</div>
+
+<div style="display:block; width:30%; margin:0 35% 0 35%; align:center;">
+<a href="/data/allotment.csv" download><button type='button' class="btn btn-primary btn-block" width="100%">
+Download as CSV
+</button></a><br>
+</div>
+
+<div class='container' style='width:50%; margin:0 25% 0 25%;'>
+<h3> Branch Statistics </h3>
+<table class='table table-striped table-hover'>
+<thead>
+	<tr>
+		<th>Programme Name</th>
+		<th>Cutoff CPI</th>
+		<th>Sanct. Strength </th>
+		<th>Orig. Strength </th>
+		<th>Final Strength </th>
+	</tr>
+</thead>		 
+<tbody>
+{% for branch in statsList %}
+	<tr>
+		<td>{{ branch.name }} </td>
+		<td>{{ branch.cutoff }} </td>
+		<td>{{ branch.sanctioned_strength }} </td>
+		<td>{{ branch.original_strength }} </td>
+		<td>{{ branch.final_strength }} </td>
+	</tr>
+{% endfor %}	
+</tbody>
+</table>
+</div>
+<div style="display:block; width:30%; margin:0 35% 0 35%; align:center;">
+<a href="output_stats.csv" download><button type='button' class="btn btn-primary btn-block" width="100%">
+Download as CSV
+</button></a><br>
+<a class="btn btn-default btn-md" href="{% url "bc_home" user.username %}">Back</a>
+
+</div>
+
+</div>
+{% endblock %}

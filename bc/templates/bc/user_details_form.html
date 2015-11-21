@@ -1,0 +1,279 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<style>
+.notife
+{
+    margin-left: 25%;
+    width: 50%;
+
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+    background: rgba(255,0,0,0.5);
+    border-radius: 3px;
+    color: white;
+
+}
+
+.Green
+{
+
+    font-size: 30px;
+    color: #7DA19B;
+    text-shadow:1px 1px 2px #000;
+
+}
+
+.warning
+{
+    margin-left: 25%;
+    width: 50%;
+
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+    background: rgba(200,150,100,0.6);
+    border-radius: 3px;
+    color: white;
+
+}
+</style>
+
+<script>
+
+
+
+$(document).ready(function(){
+//var angtext;
+//angtext=document.createElement('h1');
+var permit=1;
+var permit2=1;
+var  cat = document.getElementById('id_cat');
+var notification=document.createElement('div');
+var notification2=document.createElement('div');
+var notification3=document.createElement('div');
+var notification4=document.createElement('div');
+notification.innerHTML = "Roll number should begin with '15' and should be 9 digit long";
+notification2.classList.add("notife");
+notification2.innerHTML = "CPI should be between 0 and 10";
+notification3.classList.add("warning");
+notification3.innerHTML = "Warning: CPI cutoff for General and OBC category is 8";
+notification4.classList.add("warning");
+notification4.innerHTML = "Warning: CPI cutoff for SC and ST category is 7";
+var heading=document.getElementById('4');
+var  roll = document.getElementById('id_roll_no');
+var  cpi = document.getElementById('id_cpi');
+var  u_name = document.getElementById('id_u_name');
+var  b_name = document.getElementById('id_p_branch');
+var  b_name2 = document.getElementById('id_name');
+var notification=document.createElement('div');
+var notification2=document.createElement('div');
+notification.classList.add("notife");
+notification.innerHTML = "Roll number should begin with '15' and should be 9 digit long";
+notification2.classList.add("notife");
+notification2.innerHTML = "CPI should be between 0 and 10";
+$(u_name).keyup(function(){heading.innerHTML=u_name.value;});
+$(b_name).click(function(){heading.innerHTML=b_name.value;});
+$(b_name2).click(function(){heading.innerHTML=b_name2.value;});
+    $(roll).keyup(function(){
+        //var att=document.createAttribute("ng-model");
+        //att.value="name";
+//roll.setAttributeNode(att);
+heading.innerHTML=roll.value;
+        var string = (roll).value;
+    //var string2 = parseInt((cpi).value);
+    //Console.log(string2);
+        if((string.length!=9)||(string[0]!=1)||(string[1]!=5))
+        {
+
+        $(roll).css("background-color", "rgba(255,0,0,0.4)");
+        document.body.appendChild(notification);
+    
+        document.getElementsByClassName("btn btn-default").className='btn btn-disabled'
+        //$(noti).css("margin-left",$(rect.right));
+        //$(noti).css("display","block");
+    }
+    else
+    {
+$(roll).css("background-color", "white");
+document.body.removeChild(notification);
+    }
+
+    });
+
+$(cpi).keyup(function(){
+
+
+heading.innerHTML=cpi.value;
+    var string2 = (cpi).value;
+    if(string2>10||string2<0)
+    {
+        $(cpi).css("background-color", "rgba(255,0,0,0.4)");
+        document.body.appendChild(notification2);
+
+    }
+
+    else
+    {
+//        if (notification2)
+//            {
+//                document.body.removeChild(notification2)
+//            }
+        if((cat).value=='GE'||(cat).value=='OBC')
+            {
+                if((cpi).value<8)
+                    {
+                        $(cpi).css("background-color", "rgba(250,255,189,0.6)");
+                        document.body.appendChild(notification3);
+                        permit=2;
+                    }
+                else
+                    {
+                        if(permit==2)
+                        {
+                        document.body.removeChild(notification3)
+                        permit=1;
+                        }
+                        if(permit2==2){
+                        document.body.removeChild(notification4)
+permit2=1;
+                    }
+                        $(cpi).css("background-color", "white");
+                    }
+            }
+        else
+            {
+                if((cpi).value<7)
+                    {
+                        $(cpi).css("background-color", "rgba(250,255,189,0.4)");
+                        document.body.appendChild(notification4);
+                        permit2=2;
+                    }
+                else
+                    {
+                        if(permit2==2){
+                        document.body.removeChild(notification4)
+permit2=1;
+                    }
+                        if(permit==2)
+                        {
+                        document.body.removeChild(notification3)
+                        permit=1;
+                        }
+                        $(cpi).css("background-color", "white");
+
+                    }
+            }
+                document.body.removeChild(notification2)
+    }
+//$(cpi).css("background-color", "white");
+//document.body.removeChild(notification2);
+
+
+
+});
+
+ $(cpi).click(function(){
+    heading.innerHTML=cpi.value;
+        var string2 = (cpi).value;
+if(string2>10||string2<0)
+{
+        $(cpi).css("background-color", "rgba(255,0,0,0.4)");
+        document.body.appendChild(notification2);
+
+}
+
+else
+{
+$(cpi).css("background-color", "white");
+document.body.removeChild(notification2);
+}
+
+    });
+ $(cat).click(function()
+ {
+heading.innerHTML=cat.value;
+            if((cat).value=='GE'||(cat).value=='OBC')
+            {
+                if((cpi).value<8)
+                    {
+                        $(cpi).css("background-color", "rgba(250,255,189,0.6)");
+                        document.body.appendChild(notification3);
+                        permit=2;
+                    }
+                else
+                    {
+                        if(permit==2)
+                        {
+                        document.body.removeChild(notification3)
+                        permit=1;
+                        }
+                        if(permit2==2){
+                        document.body.removeChild(notification4)
+permit2=1;
+                    }
+                        $(cpi).css("background-color", "white");
+                    }
+            }
+        else
+            {
+                if((cpi).value<7)
+                    {
+                        $(cpi).css("background-color", "rgba(250,255,189,0.4)");
+                        document.body.appendChild(notification4);
+                        permit2=2;
+                    }
+                else
+                    {
+                        if(permit2==2){
+                        document.body.removeChild(notification4)
+permit2=1;
+                    }
+                    if(permit==2)
+                        {
+                        document.body.removeChild(notification3)
+                        permit=1;
+                        }
+                        $(cpi).css("background-color", "white");
+
+                    }
+            }
+
+ });
+//    $(document.getElementById('id_rollNumber')).keyup(function(){
+//        $(document.getElementById('id_rollNumber')).css("background-color", "pink");
+//    });
+});
+</script>//    $(document.getElementById('id_rollNumber')).keyup(function(){
+//        $(document.getElementById('id_rollNumber')).css("background-color", "pink");
+//    });
+});
+</script>
+<!-- Above is the AJAX and form error checking... enhanced UI :) -->
+<!-- Below is te html form   -->
+{% extends "bc/home.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% if create %}Create{% else %}Edit{% endif %}Details{% endblock %}
+
+{% block user %}
+    <div style='width:50%; margin:0 25% 0 25%;'>
+    <div ng-app='' id='1'>
+    <div id='4' class='Green'>
+    <br>
+    Hey! View your edits here! 
+    </div>
+    {% if create %}
+    {% url "bc_candidate_create" user.username as action_url %}
+    {% else %}
+    {% url "bc_candidate_edit" branch.pk as action_url %}   
+    {% endif %}
+    <form action="{{ action_url }}" method="POST" accept-charset='utf-8'>
+       {{ form|crispy }}
+       {% csrf_token %}
+    <p><input type='submit' class='btn btn-default' value='Submit'></p>    
+    </form>
+    </div>    
+    </div>
+{% endblock %}

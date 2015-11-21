@@ -1,0 +1,22 @@
+{% if branch.owner == user %}
+	<div class="col-md-9"
+		<a class="lead" href="{{ branch.url }}">{{ branch.name }}</a>
+		{% if edit %}
+		<br>
+		This preference was edited by <a href="{% url "bc_home" user.username %}">
+    	{{ branch.owner.username }}</a>
+		{{ branch.date_created|timesince }} ago &#09;
+		{% endif %}
+	</div>
+	{% if edit %}
+	<div class="col-md-3">
+		<div style="text-align:right; display:inline;">
+   		<a class="btn btn-default btn-sm"
+        href="{% url "bc_branch_edit" branch.pk %}">Edit</a>
+    	<a class="btn btn-default btn-sm"
+        href="{% url "bc_branch_delete" branch.pk %}">Delete</a>
+        </div>
+	</div>    
+	<br><br> 
+	{% endif %}   
+{% endif %}

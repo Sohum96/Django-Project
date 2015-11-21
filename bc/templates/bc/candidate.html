@@ -1,0 +1,35 @@
+<div class="well well-sm">
+	<div class="col-md-8"><h4>Hi <a class="lead" href="{{ branch.url }}">{{ candidate.u_name }}!</a> {% if edit %} Want to edit your personal information... </h4> This form was edited by <a href="{% url "bc_home" user.username %}"> {{ candidate.owner.username }}</a> {{ candidate.date_created|timesince }} ago &#09; {% else %}
+    Welcome to your page!<h5> You can edit your details from the form!</h5>	{% endif %}</div>
+	{% if edit %}
+	<div class="col-md-4">
+		<div style="text-align:right; display:inline; margin:50%">
+			 <br><a class="btn btn-default btn-md" href="{% url "bc_candidate_edit" candidate.pk %}">Edit Personal Info</a>	</div>       
+    </div>
+    <br>
+    {% endif %}
+    <br><br><br>
+</div>
+<h3 style='margin:0 0 0 35%;'>User Details:</h3>
+<div class='container' style='width:35%; margin:0 32% 0 33%;'>
+<table class='table table-striped table-hover'>
+<tbody>
+	<tr>
+		<td>RollNo :</td>
+		<td><a href="{{ branch.url }}">{{ candidate.roll_no }}</a></td>
+	</tr>
+	<tr>
+		<td>Present Branch : </td>
+		<td><a href="{{ branch.url }}">{{ candidate.p_branch }}</a></td>
+	</tr>
+	<tr>
+		<td>CPI :</td>
+		<td><a  href="{{ branch.url }}">{{ candidate.cpi }}</a></td>
+	</tr>
+	<tr>
+		<td>Category :</td>
+		<td><a href="{{ branch.url }}">{{ candidate.cat }}</a></td>
+	</tr>
+</tbody>
+</table>
+</div>

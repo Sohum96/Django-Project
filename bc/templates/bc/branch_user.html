@@ -1,0 +1,12 @@
+{% extends "bc/home.html" %}
+
+{% block title %}{{ user.username }}'s Form{% endblock %}
+
+{% block heading %}
+{% if not user.is_superuser %}
+    <small><strong>Click on buttons below to open up forms ...</strong></small>
+{% else %}
+	 <small><strong>Admin Site :)</strong></small>
+{% endif %}
+</h1>
+{% endblock %}

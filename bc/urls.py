@@ -16,15 +16,16 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('bc.views',
-    url(r'^user/(?P<username>[-\w]+)/$', 'branch_user', name='bc_branch_user'),
-    url(r'^create/$', 'branch_create', name='bc_branch_create'),
-    url(r'^edit/(?P<pk>\d+)/$', 'branch_edit', name='bc_branch_edit'),
-    url(r'^delete/(?P<pk>\d+)/$', 'branch_delete', name='bc_branch_delete'),
-    url(r'^$', 'branch_list', name='bc_branch_list'),
-    url(r'^export/$', 'branch_export', name='bc_branch_export'),
-    url(r'^import/$', 'branch_import', name="bc_branch_import"),
-    url(r'^algorithm/$', 'branch_algorithm', name='bc_branch_algorithm'),
-    url(r'^Create/$', 'candidate_create', name='bc_candidate_create'),
-    url(r'^Edit/(?P<pk>\d+)/$', 'candidate_edit', name='bc_candidate_edit'),
-    
+    url(r'^$', 'user_login', name='user_login'),
+    url(r'^Home/(?P<username>[-\w]+)/$', 'home', name='bc_home'),
+    url(r'^FormPage/(?P<username>[-\w]+)/$', 'form_page', name='bc_form_page'),
+    url(r'^AddPreference/(?P<username>[-\w]+)/$', 'add_preference', name='bc_branch_create'),
+    url(r'^EditPreference/(?P<pk>\d+)/$', 'edit_preference', name='bc_branch_edit'),
+    url(r'^DeletePreference/(?P<pk>\d+)/$', 'delete_preference', name='bc_branch_delete'),
+    url(r'^AddInfo/(?P<username>[-\w]+)/$', 'add_info', name='bc_candidate_create'),
+    url(r'^EditInfo/(?P<pk>\d+)/$', 'edit_info', name='bc_candidate_edit'),
+    url(r'^ExportData/(?P<username>[-\w]+)/$', 'export_data', name='bc_branch_export'),
+    url(r'^ImportData/(?P<username>[-\w]+)/$', 'import_data', name="bc_branch_import"),
+    url(r'^RunAlgorithm/(?P<username>[-\w]+)/$', 'run_branch_change_algorithm', name='bc_branch_algorithm'),    
+    url(r'^View/(?P<username>[-\w]+)$', 'preview_forms',name='bc_preview'),
 )
